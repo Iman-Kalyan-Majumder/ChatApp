@@ -1,0 +1,208 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*
+{
+    font-family: Arial;
+}
+.outerContainer
+{
+    width:60%;
+    height:99%;
+    margin:0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-color: white;
+}
+.container
+{
+    width:90%;
+    height:10%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border:0.1vw solid black;
+    border-radius:2vw;
+}
+.chat-area
+{
+    margin:0;
+    height:85%;
+    width:100%;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-y:scroll;
+}
+.container>input
+{
+    width:80%;
+    height:100%;
+    margin-top:-0.5vw;
+    font-size:1.5vw;
+    padding-left: 1.5vw;
+    border-width: 0;
+}
+.container>input:focus
+{
+    outline:none;
+}
+.container>button
+{
+    margin:0;
+    width:20%;
+    height:100%;
+    font-size:1.5vw;
+    border-radius: 0;
+    border-width:0;
+    border-color: transparent;
+    background-color: white;
+    color:blue;
+}
+.container>button:hover
+{
+    cursor: pointer;
+}
+.messages-list
+{
+    width:100%;
+}
+.my-message-item
+{
+    width:60%;
+    height:auto;
+    float:right;
+    margin:1vw 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+}
+.my-message
+{
+    background-color: rgb(77, 77, 77);
+    color:white;
+    padding:0vw 2vw;
+    border-radius: 1vw 1vw 0 1vw;
+    margin-right:2vw;
+}
+.my-message>h5
+{
+    width:100%;
+    text-align: right;
+    margin:0;
+    margin-top:1.5vw;
+}
+.received-message-item
+{
+    width:60%;
+    height:auto;
+    margin:1vw 0;
+    float:left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+}
+.received-message
+{
+    background-color: rgb(0, 0, 224);
+    color:white;
+    padding:0vw 2vw;
+    border-radius: 1vw 1vw 1vw 0;
+    margin-left: 2vw;
+}
+.received-message>h5
+{
+    width:100%;
+    text-align: left;
+    margin:0;
+    margin-top:1.5vw;
+}
+.received-message>p,.my-message>p
+{
+    width:100%;
+    word-break: break-word;
+}
+@media screen and (max-width:481px)
+{
+    *
+    {
+        font-size:4.5vw;
+    }
+    .outerContainer
+    {
+        width:100%;
+        height:100%;
+        padding: 0;
+        background-color: white;
+    }
+    .chat-area
+    {
+        height:91%;
+        position: fixed;
+        bottom:15vw;
+    }
+    .container
+    {
+        position: fixed;
+        z-index: 10;
+        bottom:1vw;
+        height:12vw;
+        border-radius: 6vw;
+    }
+    .container>input
+    {
+        height:12vw;
+        padding-left:6vw;
+        font-size:4.5vw;
+    }
+    .container>button
+    {
+        font-size: 4vw;
+    }
+    .received-message-item,.my-message-item
+    {
+        width:70%;
+        margin-top:4vw;
+    }
+    .received-message
+    {
+        border-radius: 5vw 5vw 5vw 0;
+        padding:2vw 6vw;
+    }
+    .my-message
+    {
+        border-radius: 5vw 5vw 0 5vw;
+        padding:2vw 6vw;
+    }
+    .received-message>h5,.my-message>h5
+    {
+        margin-top:3vw;
+    }
+}

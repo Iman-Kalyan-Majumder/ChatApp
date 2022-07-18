@@ -1,0 +1,69 @@
+.joinWrapper
+{
+    width:20vw;
+    height:20vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:4vw 3vw;
+    border:0.1vw solid grey;
+    border-radius:0.5vw;
+    background-color: white;
+}
+.join
+{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.inputField
+{
+    width:100%;
+    height:2.5vw;
+    padding:0.5vw 1vw;
+    font-size: 1.5vw;
+    border-radius:0.5vw;
+    border:0.1vw solid black;
+}
+.inputField:focus
+{
+    border: 0.1vw solid blue;
+    outline: none;
+}
+.button
+{
+    width:20vw;
+    padding:1vw;
+    border-radius:0.5vw;
+    font-size: 1.5vw;
+}
+.button:hover
+{
+    cursor: pointer;
+}
+@media screen and (max-width:481px)
+{
+    .joinWrapper
+    {
+        width:60vw;
+        height:60vw;
+        padding:5vw;
+    }
+    .inputField
+    {
+        height:10vw;
+        padding:1vw 2vw;
+        font-size: 4.5vw;
+        border-radius: 1vw;
+    }
+    .button
+    {
+        height:11vw;
+        width:60vw;
+        font-size: 4.5vw;
+    }
+}
