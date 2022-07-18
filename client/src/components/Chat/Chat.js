@@ -35,6 +35,7 @@ const Chat = () => {
                     type="text"
                     value={message}
                     onChange={event=>setMessage(event.target.value)}
+                    placeholder="Message..."
                 />
                 <button type="submit" onClick={event=>handleClick(event)}>Send</button>
             </div>
