@@ -1,11 +1,12 @@
 import {useState,useEffect,useRef} from 'react';
 import socketIOClient from "socket.io-client";
 
-const SOCKET_URL='https://chat-app-by-iman.herokuapp.com/';
+const SOCKET_URL='https://chat-app-by-iman.herokuapp.com/';//localhost:5000/ was used, to run the server locally.
 
+//This is a custom hook
 const useChat=(name,room)=>{
 
-    const [messages,setMessages]=useState([]);
+    const [messages,setMessages]=useState([]);//Here, the state of the component is an array containing all the messages the user should be able to see
     const socketRef=useRef();
 
     useEffect(()=>{
@@ -21,11 +22,11 @@ const useChat=(name,room)=>{
             };
             setMessages((messages) => [...messages, incomingMessage]);
             console.log(incomingMessage);
-        });
+        });//handles a 'message' event emitted by the backend.
         
         return () => {
             socketRef.current.disconnect();
-        };
+        };//disconnects the user
     },[room]);
 
     const sendMessage=(messageBody)=>{
@@ -34,7 +35,7 @@ const useChat=(name,room)=>{
             name: name,
             body: messageBody
         });
-    }
+    };//emits a 'message' event which is then handled by the backend
 
     return {messages,sendMessage};
 }
