@@ -53,7 +53,7 @@
     width:80%;
     height:100%;
     font-size:1.5vw;
-    padding-left: 2vw;
+    padding-left: 1.5vw;
     border-width: 0;
 }
 .container>input:focus
@@ -99,8 +99,7 @@
     color:white;
     padding:0vw 2vw;
     border-radius: 1vw 1vw 0 1vw;
-    position:relative;
-    right:2vw;
+    margin-right:2vw;
 }
 .my-message>h5
 {
@@ -128,8 +127,7 @@
     color:white;
     padding:0vw 2vw;
     border-radius: 1vw 1vw 1vw 0;
-    position:relative;
-    left:2vw;
+    margin-left: 2vw;
 }
 .received-message>h5
 {
@@ -158,9 +156,8 @@
     }
     .chat-area
     {
-        height:90%;
-        width:100%;
-        position: absolute;
+        height:91%;
+        position: fixed;
         bottom:15vw;
     }
     .container
@@ -181,15 +178,9 @@
     {
         font-size: 4vw;
     }
-    .received-message-item
+    .received-message-item,.my-message-item
     {
         width:70%;
-        margin-top:4vw;
-    }
-    .my-message-item
-    {
-        width:70%;
-        float:right;
         margin-top:4vw;
     }
     .received-message
@@ -201,8 +192,6 @@
     {
         border-radius: 5vw 5vw 0 5vw;
         padding:2vw 6vw;
-        position:relative;
-        right:2vw;
     }
     .received-message>h5,.my-message>h5
     {
